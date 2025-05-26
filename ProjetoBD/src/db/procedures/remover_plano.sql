@@ -1,4 +1,5 @@
-DELIMITER //
+
+    DELIMITER //
 
     CREATE PROCEDURE RemoverPlano(
         IN p_id_plano INT
@@ -8,3 +9,4 @@ DELIMITER //
     END //
 
     DELIMITER ;
+    

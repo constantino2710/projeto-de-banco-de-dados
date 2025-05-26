@@ -1,4 +1,5 @@
-DELIMITER //
+
+    DELIMITER //
 
     CREATE PROCEDURE RemoverArquivo(
         IN p_id_arquivo INT
@@ -8,3 +9,4 @@ DELIMITER //
     END //
 
     DELIMITER ;
+    

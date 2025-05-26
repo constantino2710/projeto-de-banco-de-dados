@@ -1,19 +1,12 @@
-DELIMITER $$
 
-CREATE PROCEDURE remover_usuario (
-    IN p_id INT
-)
-BEGIN
-    DELETE FROM usuario WHERE id = p_id;
-END$$
+    DELIMITER //
 
-DELIMITER ;DELIMITER $$
+    CREATE PROCEDURE RemoverUsuario(
+        IN p_id_usuario INT
+    )
+    BEGIN
+        DELETE FROM usuario WHERE id_usuario = p_id_usuario;
+    END //
 
-CREATE PROCEDURE remover_usuario (
-    IN p_id INT
-)
-BEGIN
-    DELETE FROM usuario WHERE id = p_id;
-END$$
-
-DELIMITER ;
+    DELIMITER ;
+    

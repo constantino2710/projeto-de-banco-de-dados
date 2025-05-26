@@ -36,8 +36,7 @@ public class Administrador {
                 ", idUsuarioAdm=" + idUsuarioAdm +
                 '}';
     }
-
-    public boolean insertAdm(Connection connection) {
+    public boolean insertAdm(Connection connection){
         String sql = "INSERT INTO administrador(id_usuario_adm) VALUES (?)";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS)) {
@@ -62,22 +61,11 @@ public class Administrador {
             return false;
         }
     }
-
     public void printFilesAdminHasAccessTo(Connection connection) {
-        String sql = "SELECT nome, tipo, permissoes_acesso, tamanho, data_ultima_mod, localizacao, URL FROM acesso_arquivos_admin"; // coloquei
-                                                                                                                                    // cada
-                                                                                                                                    // nome
-                                                                                                                                    // ao
-                                                                                                                                    // invés
-                                                                                                                                    // de
-                                                                                                                                    // *
-                                                                                                                                    // para
-                                                                                                                                    // deixar
-                                                                                                                                    // mais
-                                                                                                                                    // claro
+        String sql = "SELECT nome, tipo, permissoes_acesso, tamanho, data_ultima_mod, localizacao, URL FROM acesso_arquivos_admin";  //coloquei cada nome ao invés de * para deixar mais claro
 
         try (PreparedStatement stmt = connection.prepareStatement(sql);
-                ResultSet rs = stmt.executeQuery()) {
+            ResultSet rs = stmt.executeQuery()) {
 
             System.out.println("Arquivos que o administrador tem acesso:");
 

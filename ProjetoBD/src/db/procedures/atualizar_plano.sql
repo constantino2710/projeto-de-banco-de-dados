@@ -1,4 +1,5 @@
-DELIMITER //
+
+    DELIMITER //
 
     CREATE PROCEDURE AtualizarPlano(
         IN p_id_plano INT,
@@ -14,3 +15,4 @@ DELIMITER //
     END //
 
     DELIMITER ;
+    
